@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="gallery">
+        <h1>Image Gallery</h1>
+        <div class="view-mode">
+            <i class="fas fa-th" onclick="setViewMode('grid')"></i>
+            <i class="fas fa-list" onclick="setViewMode('list')"></i>
+        </div>
+        <div class="thumbnails grid-view">
+          <img src="Images/img1.jpg" alt="Image 1" onclick="openModal(0)">
+          <img src="Images/img2.jpg" alt="Image 2" onclick="openModal(1)">
+          <img src="Images/img3.jpg" alt="Image 3" onclick="openModal(2)">
+          <img src="Images/img4.jpg" alt="Image 4" onclick="openModal(3)">
+          <img src="Images/img5.jpg" alt="Image 5" onclick="openModal(4)">
+          <img src="Images/img6.jpg" alt="Image 6" onclick="openModal(5)">
+          <img src="Images/img7.jpg" alt="Image 7" onclick="openModal(6)">
+          <img src="Images/img8.jpg" alt="Image 8" onclick="openModal(7)">
+        </diV>
+    </div>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="event.stopPropagation(); closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+        <button class="prev" onclick="event.stopPropagation(); changeSlide(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="next" onclick="event.stopPropagation(); changeSlide(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <button class="fullscreen" onclick="event.stopPropagation(); toggleFullscreen()">
+            <i class="fas fa-expand"></i>
+        </button>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

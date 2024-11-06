@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.gallery {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.view-mode {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.view-mode i {
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.thumbnails.grid-view img {
+  width: 200px;
+  height: auto;
+  margin: 5px;
+}
+
+.thumbnails.list-view {
+  display: block;
+}
+
+.thumbnails.list-view img {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.prev, .next, .fullscreen {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.fullscreen {
+  top: 20px;
+  right: 60px;
+}
+
+@media (max-width: 768px) {
+  .thumbnails.grid-view img {
+      width: 100%;
+  }
+}

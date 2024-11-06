@@ -1,1 +1,1 @@
-This is an image gallery where users can view a collection of images.I
+This is an image gallery where users can view a collection of images.
